@@ -1,3 +1,6 @@
+# creater BY VK
+
+
 import cv2
 import os
 import traceback
@@ -3167,17 +3170,7 @@ def HLA_PositionCheck_WITH_ROD_3CYLINDER(Position, OBJECT_LIST, original_image):
                     logger.debug(f"Right I2,HlaSize_3cy is {HlaSize}  yminTR: {yminTR}, yminRTR: {yminRTR}, "
                                  f"thresholdPixel_RightSide_1: {thresholdPixel_RightSide_1}, "
                                  f"thresholdPixel_RightSide_2: {thresholdPixel_RightSide_2}")
-                    #Right I2,HlaSize_3cy is 255  yminTR: 719, yminRTR: 761, thresholdPixel_RightSide_1: 40, thresholdPixel_RightSide_2: 10
-                    #Right I2,HlaSize_3cy is 261  yminTR: 772, yminRTR: 821, thresholdPixel_RightSide_1: 45, thresholdPixel_RightSide_2: 10
-                    #Right I2,HlaSize_3cy is 258  yminTR: 691, yminRTR: 746, thresholdPixel_RightSide_1: 52, thresholdPixel_RightSide_2: 10
-                    #Right I2,HlaSize_3cy is 260  yminTR: 743, yminRTR: 806, thresholdPixel_RightSide_1: 60, thresholdPixel_RightSide_2: 10
-                    #Right I2,HlaSize is 254  yminTR: 760, yminRTR: 823, thresholdPixel_RightSide_1: 60, thresholdPixel_RightSide_2: 10
-                    #Right I2,HlaSize is 254  yminTR: 760, yminRTR: 823, thresholdPixel_RightSide_1: 60, thresholdPixel_RightSide_2: 10
-                    #Right I2,HlaSize is 254  yminTR: 760, yminRTR: 823, thresholdPixel_RightSide_1: 60, thresholdPixel_RightSide_2: 10
-                                                           #yminRTR = NOT OK =786
-                    #Right I2,HlaSize_3cy is 266  yminTR: 792, yminRTR: 871, thresholdPixel_RightSide_1: 67, thresholdPixel_RightSide_2: 10
-                    #Right I2,HlaSize_3cy is 263  yminTR: 832, yminRTR: 901, thresholdPixel_RightSide_1: 67, thresholdPixel_RightSide_2: 10
-
+                  
 
                     if yminTR < (yminRTR - thresholdPixel_RightSide_1) or yminTR > (yminRTR + thresholdPixel_RightSide_2) or HlaSize < 210 :   #737 #ok 198
                         HLA_POSTION_RIGHT = "NOT OK"
@@ -3240,9 +3233,7 @@ def HLA_PositionCheck_WITH_ROD_3CYLINDER(Position, OBJECT_LIST, original_image):
                     logger.debug(f"Left I3, HlaSize is {HlaSize}  ymaxTL: {ymaxTL}, ymaxRTL: {ymaxRTL}, xminTL: {xminTL}, "
                                  f"thresholdPixel_LeftSide_1: {thresholdPixel_LeftSide_1}, "
                                  f"thresholdPixel_LeftSide_2: {thresholdPixel_LeftSide_2}")
-                    #Left I3, HlaSize is 228  ymaxTL: 327, ymaxRTL: 293, xminTL: 1076, thresholdPixel_LeftSide_1: 100, thresholdPixel_LeftSide_2: 30
-                    #Left I3, HlaSize is 240  ymaxTL: 345, ymaxRTL: 302, xminTL: 1169, thresholdPixel_LeftSide_1: 100, thresholdPixel_LeftSide_2: 40
-                    #Left I3, HlaSize is 269  ymaxTL: 385, ymaxRTL: 334, xminTL: 1206, thresholdPixel_LeftSide_1: 100, thresholdPixel_LeftSide_2: 50
+                   
                     #Left I3, HlaSize is 62  ymaxTL: 369, ymaxRTL: 537, xminTL: 1122, thresholdPixel_LeftSide_1: 100, thresholdPixel_LeftSide_2: 60
                     #Left I3, HlaSize is 227  ymaxTL: 358, ymaxRTL: 301, xminTL: 1225, thresholdPixel_LeftSide_1: 55, thresholdPixel_LeftSide_2: 53
 
@@ -3306,7 +3297,7 @@ def HLA_PositionCheck_WITH_ROD_3CYLINDER(Position, OBJECT_LIST, original_image):
                 logger.debug(f"I3 Exception in Right Side check: {e}")
                 print("I3 Exception in Right Side check:", e)  
  
-        #======================================= E3
+        #======================================= E3 =======================================#
         if Position == "4":  # E3 position check
             leftSide_Cord = 0
             RightSide_Cord = 0
@@ -3362,10 +3353,7 @@ def HLA_PositionCheck_WITH_ROD_3CYLINDER(Position, OBJECT_LIST, original_image):
                     logger.debug(f"Left E3,Check_Line_distance_with_hla is {Check_Line_distance_with_hla} Check_Line_distance_with_hla_ymin is {Check_Line_distance_with_hla_ymin} SizeOf_cy_line is {SizeOf_cy_line} ymaxTL: {ymaxTL}, ymaxRTL: {ymaxRTL}, xminTL: {xminTL}, "
                                  f"thresholdPixel_LeftSide_1: {thresholdPixel_LeftSide_1}, "
                                  f"thresholdPixel_LeftSide_2: {thresholdPixel_LeftSide_2}")
-                    #Left E3,cy is 341 SizeOf_cy_line is 4 ymaxTL: 469, ymaxRTL: 442, xminTL: 491, thresholdPixel_LeftSide_1: 70, thresholdPixel_LeftSide_2: 55
-                    #Left E3,cy is 393 SizeOf_cy_line is -3 ymaxTL: 521, ymaxRTL: 512, xminTL: 535, thresholdPixel_LeftSide_1: 70, thresholdPixel_LeftSide_2: 55
-                    #Left E3,cy is 385 SizeOf_cy_line is 13 ymaxTL: 511, ymaxRTL: 497, xminTL: 469, thresholdPixel_LeftSide_1: 70, thresholdPixel_LeftSide_2: 55
-                    #Left E3,cy is 297 SizeOf_cy_line is 18 ymaxTL: 429, ymaxRTL: 396, xminTL: 521, thresholdPixel_LeftSide_1: 70, thresholdPixel_LeftSide_2: 55
+                  
                     #Left E3,Check_Line_distance_with_hla is 73 SizeOf_cy_line is 9 ymaxTL: 353, ymaxRTL: 311, xminTL: 592, thresholdPixel_LeftSide_1: 70, thresholdPixel_LeftSide_2: 40
                     #Left E3,Check_Line_distance_with_hla is 78 SizeOf_cy_line is 8 ymaxTL: 411, ymaxRTL: 364, xminTL: 576, thresholdPixel_LeftSide_1: 70, thresholdPixel_LeftSide_2: 45
                     #Left E3,Check_Line_distance_with_hla is 71 SizeOf_cy_line is 11 ymaxTL: 306, ymaxRTL: 248, xminTL: 606, thresholdPixel_LeftSide_1: 70, thresholdPixel_LeftSide_2: 55
@@ -3430,13 +3418,7 @@ def HLA_PositionCheck_WITH_ROD_3CYLINDER(Position, OBJECT_LIST, original_image):
                                  f"thresholdPixel_RightSide_1: {thresholdPixel_RightSide_1}, "
                                  f"thresholdPixel_RightSide_2: {thresholdPixel_RightSide_2}")
                     
-                    ##Right E3, Check_Line_distance_with_hla is 80 Check_Line_distance_with_hla_ymin is 102 SizeOf_cy_line 1 yminTR: 801, yminRTR: 835, thresholdPixel_RightSide_1: 22, thresholdPixel_RightSide_2: 40
-                    #Right E3, Check_Line_distance_with_hla is 84 Check_Line_distance_with_hla_ymin is 96 SizeOf_cy_line -2 yminTR: 833, yminRTR: 865, thresholdPixel_RightSide_1: 22, thresholdPixel_RightSide_2: 40
-                    #Right E3, Check_Line_distance_with_hla is 85 Check_Line_distance_with_hla_ymin is 101 SizeOf_cy_line -1 yminTR: 858, yminRTR: 897, thresholdPixel_RightSide_1: 37, thresholdPixel_RightSide_2: 40
-                    #Right E3, Check_Line_distance_with_hla is 87 Check_Line_distance_with_hla_ymin is 99 SizeOf_cy_line -6 yminTR: 861, yminRTR: 898, thresholdPixel_RightSide_1: 33, thresholdPixel_RightSide_2: 40
-                    #Right E3, Check_Line_distance_with_hla is 84 Check_Line_distance_with_hla_ymin is 94 SizeOf_cy_line -7 yminTR: 877, yminRTR: 904, thresholdPixel_RightSide_1: 22, thresholdPixel_RightSide_2: 40
-                    #Right E3, Check_Line_distance_with_hla is 83 Check_Line_distance_with_hla_ymin is 97 SizeOf_cy_line 2 yminTR: 791, yminRTR: 833, thresholdPixel_RightSide_1: 38, thresholdPixel_RightSide_2: 40
-                    #Right E3, Check_Line_distance_with_hla is 90 Check_Line_distance_with_hla_ymin is 99 SizeOf_cy_line 0 yminTR: 849, yminRTR: 895, thresholdPixel_RightSide_1: 38, thresholdPixel_RightSide_2: 40
+              
                     #Right E3, Check_Line_distance_with_hla is 86 Check_Line_distance_with_hla_ymin is 97 SizeOf_cy_line -2 yminTR: 853, yminRTR: 894, thresholdPixel_RightSide_1: 38, thresholdPixel_RightSide_2: 40
                     #Right E3, Check_Line_distance_with_hla is 85 Check_Line_distance_with_hla_ymin is 100 SizeOf_cy_line 2 yminTR: 784, yminRTR: 840, thresholdPixel_RightSide_1: 49, thresholdPixel_RightSide_2: 40
                     #Right E3, Check_Line_distance_with_hla is 85 Check_Line_distance_with_hla_ymin is 98 SizeOf_cy_line 2 yminTR: 834, yminRTR: 897, thresholdPixel_RightSide_1: 61, thresholdPixel_RightSide_2: 40
@@ -3468,7 +3450,7 @@ def HLA_PositionCheck_WITH_ROD_3CYLINDER(Position, OBJECT_LIST, original_image):
                 logger.debug(f"E4 Exception in Right Side check: {e}")
                 print("E4 Exception in Right Side check:", e)  
 
-        #======================================= E2
+        #======================================= E2 =======================================#
         if Position == "5":  # E2 position check
             leftSide_Cord = 0
             RightSide_Cord = 0
